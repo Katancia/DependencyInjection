@@ -1,5 +1,6 @@
 package pl.karol.lingu;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
@@ -12,7 +13,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class FileService {
-    private String fileName = "data.csv";
+
+    private String fileName;
+
+    public FileService(@Value("${filename}") String fileName) {
+        this.fileName = fileName;
+    }
 
     public List<Entry> readAllFiles() throws IOException {
         return Files.readAllLines(Paths.get(fileName))
