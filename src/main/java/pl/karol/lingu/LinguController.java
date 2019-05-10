@@ -66,10 +66,10 @@ public class LinguController {
             consoleOutputWriter.println(String.format("Give a translation for :\"%s\"", entry.getOriginal()));
             String translation = sc.nextLine();
             if(entry.getTranslation().equalsIgnoreCase(translation)) {
-                consoleOutputWriter.println("Good answear");
+                consoleOutputWriter.println("Good answer");
                 score++;
             } else {
-                consoleOutputWriter.println("Wrong answear - " + entry.getTranslation());
+                consoleOutputWriter.println("Wrong answer - " + entry.getTranslation());
             }
         }
         consoleOutputWriter.println(String.format("Your score: %d/%d\n", score, testSize));

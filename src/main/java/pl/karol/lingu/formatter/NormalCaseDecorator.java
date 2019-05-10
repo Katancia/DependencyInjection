@@ -1,4 +1,4 @@
-package pl.karol.lingu;
+package pl.karol.lingu.formatter;
 
 import org.springframework.stereotype.Component;
 

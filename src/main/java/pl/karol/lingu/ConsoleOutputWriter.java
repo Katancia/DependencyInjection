@@ -3,6 +3,7 @@ package pl.karol.lingu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import pl.karol.lingu.formatter.TextDecorator;
 
 @Component
 public class ConsoleOutputWriter {
